@@ -8,6 +8,9 @@ export const fetchRaces = createAsyncThunk(
   'race/fetchRaces',
   async (args: {id: string; page: number}) => {
     const response = await Api.drivers.race(args?.id, args?.page);
+    if (!response.success) {
+      throw new Error('Ошибка при запросе на сервер. Код: ' + response.code);
+    }
     return response.data;
   },
 );

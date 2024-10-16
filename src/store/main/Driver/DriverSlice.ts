@@ -8,6 +8,9 @@ export const fetchDrivers = createAsyncThunk(
   'driver/fetchDrivers',
   async (page: any) => {
     const response = await Api.drivers.list(page);
+    if (!response.success) {
+      throw new Error('Ошибка при запросе на сервер. Код: ' + response.code);
+    }
     return response.data;
   },
 );

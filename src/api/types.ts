@@ -2,7 +2,6 @@ export interface IResponse<T> {
   data?: {
     MRData: T;
   };
-  error: string;
   success: boolean;
   code: number;
 }

@@ -84,8 +84,8 @@ export const DriverScreen: React.FC<any> = ({route}) => {
               <InfoMessage type={MESSAGE_TYPE.DANGER} text={error} />
             </FlexRow>
           )}
-          {!loading && list.length === 0 && (
-            <FlexRow isBorder width="100%">
+          {!error && !loading && list.length === 0 && (
+            <FlexRow width="100%">
               <Flex1>
                 <InfoMessage type={MESSAGE_TYPE.INFO} text="Список пуст" />
               </Flex1>

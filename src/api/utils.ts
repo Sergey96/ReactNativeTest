@@ -8,19 +8,16 @@ export const get = async (url: string) => {
       success: true,
       code: 200,
       data: response.data,
-      error: '',
     };
   } catch (error) {
     if (axios.isAxiosError(error)) {
       return {
         success: false,
-        error: error?.response?.data.message ?? '',
         code: error?.response?.status ?? 500,
       };
     }
     return {
       success: false,
-      error: 'Ошибка при выполнении запроса',
       code: 500,
     };
   }
