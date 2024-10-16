@@ -11,12 +11,12 @@
 
 ## Стек
 
-ui - стандартные компоненты react-native
-TypeScript
-react-navigation
-axios
-react-redux
-redux-toolkit
+- ui - стандартные компоненты react-native
+- TypeScript
+- react-navigation
+- axios
+- react-redux
+- redux-toolkit
 
 
 ```bash
